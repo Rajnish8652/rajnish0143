@@ -1,0 +1,28 @@
+{% block content %}
+
+<div class="container p-3 my-3 border bg-light">
+  <div class="row">
+    <div class="col-md-12">
+      <h4 > <b> Student Form </b>  
+     </h4>
+
+        <div>
+          <table class="table table-hover table-sm">
+            <tr class="text-white-50 bg-dark">
+                <th>Name:</th>
+                <th>Password:</th>
+            </tr>
+            {% for row in detailsdata %}
+            <tr>
+                <td>{{row.name}}</td><br>
+                <td>{{row.password}}</td>
+            </tr>
+            {% endfor %}
+            </table>
+
+          </div>
+          
+      </div>
+    </div>
+</div>
+{% endblock %}

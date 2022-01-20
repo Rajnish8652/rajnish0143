@@ -1,0 +1,28 @@
+
+{% block content %}
+
+<div class="container p-3 my-3 border bg-light">
+    <div class="row">
+      <div class="col-md-12">
+        <form method="POST"  action="">
+          <div class="row">
+            <div>
+              {{ form.csrf_token }}
+              {{ form.hidden_tag() }}
+              <br>
+            </div>
+           <div class="col">
+            <div>
+              {{ form.name }} <br><br>
+              {{ form.password }}
+            </div>
+            </div>
+          </div> 
+          <input type="submit" class="btn btn-primary" value="Submit">
+        </form>
+
+      </div>
+    </div>
+</div>
+
+{% endblock %}
